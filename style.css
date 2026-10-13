@@ -72,6 +72,12 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
+.counter {
+  margin: -8px 0 20px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .video {
   position: relative;
   width: 100%;
