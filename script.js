@@ -1,8 +1,6 @@
-const openBtn = document.getElementById("open-btn");
-const bait = document.getElementById("bait");
-const result = document.getElementById("result");
-const video = document.getElementById("video");
 const counter = document.getElementById("counter");
+const video = document.getElementById("video");
+const soundBtn = document.getElementById("sound-btn");
 
 const STORAGE_KEY = "krolly_count";
 
@@ -28,12 +26,14 @@ function pluralTimes(n) {
   return "раз";
 }
 
-openBtn.addEventListener("click", function () {
-  const count = loadCount() + 1;
-  saveCount(count);
+const count = loadCount() + 1;
+saveCount(count);
+counter.textContent = "Ты попался на этой странице " + count + " " + pluralTimes(count);
 
-  counter.textContent = "Ты попался на этой странице " + count + " " + pluralTimes(count);
-  bait.hidden = true;
-  result.hidden = false;
-  video.src = "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1";
+soundBtn.addEventListener("click", function () {
+  const message = JSON.stringify({ event: "command", func: "unMute", args: [] });
+  video.contentWindow.postMessage(message, "https://www.youtube-nocookie.com");
+  const volume = JSON.stringify({ event: "command", func: "setVolume", args: [100] });
+  video.contentWindow.postMessage(volume, "https://www.youtube-nocookie.com");
+  soundBtn.hidden = true;
 });

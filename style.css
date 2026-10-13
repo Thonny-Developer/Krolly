@@ -52,6 +52,7 @@ h1 {
 }
 
 button {
+  margin-bottom: 16px;
   padding: 14px 28px;
   border: 0;
   border-radius: 10px;
@@ -97,6 +98,7 @@ a:focus-visible {
 }
 
 .fallback {
+  display: block;
   color: var(--muted);
   font-size: 0.9rem;
 }
