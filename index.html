@@ -4,23 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Krolly</title>
-  <meta name="description" content="Маленький сайт с сюрпризом">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <main class="card">
-    <p class="tag">Krolly</p>
-    <h1>Тебя зароллили</h1>
-    <p class="text">Этот сайт сделан ради одной шутки, и ты в неё попал.</p>
-    <p id="counter" class="counter"></p>
+  <iframe id="video" title="Видео" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&playsinline=1&controls=0&enablejsapi=1" allow="autoplay; encrypted-media; fullscreen"></iframe>
 
-    <div class="video">
-      <iframe id="video" title="Rick Astley, Never Gonna Give You Up" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&playsinline=1&enablejsapi=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-
-    <button id="sound-btn" type="button">Включить звук</button>
-    <a class="fallback" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">Не грузится? Открыть на YouTube</a>
-  </main>
+  <button id="sound-btn" type="button" aria-label="Включить звук">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+      <path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.06A4.5 4.5 0 0 0 16.5 12zM14 3.23v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54z"/>
+    </svg>
+  </button>
 
   <script src="./script.js"></script>
 </body>
