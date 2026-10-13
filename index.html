@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Krolly</title>
+  <meta name="description" content="Маленький сайт с сюрпризом">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="card">
+    <section id="bait">
+      <p class="tag">Krolly</p>
+      <h1>Для тебя есть сюрприз</h1>
+      <p class="text">Нажми кнопку, и он откроется. Это займёт пару секунд.</p>
+      <button id="open-btn" type="button">Открыть сюрприз</button>
+    </section>
+
+    <section id="result" hidden>
+      <h1>Тебя зароллили</h1>
+      <p class="text">Never gonna give you up, never gonna let you down.</p>
+      <div class="video">
+        <iframe id="video" title="Rick Astley, Never Gonna Give You Up" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <a class="fallback" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">Не грузится? Открыть на YouTube</a>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
